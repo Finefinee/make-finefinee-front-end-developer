@@ -9,7 +9,7 @@ const MenubarItem = ({MenuName, imgName}: ItemProps) => {
     return (
         <S.MenubarItem>
             <img src={`src/assets/${imgName}`} alt={MenuName}/>
-            <h2>{MenuName}</h2>
+            <S.MenuName>{MenuName}</S.MenuName>
         </S.MenubarItem>
     );
 };

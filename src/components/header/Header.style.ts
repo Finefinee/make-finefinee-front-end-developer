@@ -3,14 +3,15 @@ import styled from "styled-components";
 export const Header = styled.div`
     display: flex;
     width: 100%;
-    height: 10vh;
+    height: 4.5rem;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #383A3B;
+    flex: 1;
 `;
 
 export const Padding = styled.div`
     padding: 0 3vh 0 3vh;
+    border-bottom: 1px solid #383A3B;
 `;
 
 export const HeaderItem = styled.div`
@@ -21,13 +22,13 @@ export const HeaderItem = styled.div`
     
     &.header-right {
         display: flex;
-        gap: 5vh;
+        gap: 2.5rem;
     }
 `;
 
 export const Profile = styled.div`
   display: flex;
-  gap: 2vh;
+  gap: 1rem;
 `;
 
 export const ProfileInfo = styled.div`
@@ -40,5 +41,5 @@ export const Name = styled.p`
 `;
 
 export const Username = styled.p`
-  font-size: 2vh;
+  font-size: 1rem;
 `;

@@ -4,18 +4,18 @@ export const Menubar = styled.div`
     display: flex;
     flex-direction: column;
     align-self: start;
-    gap: 3vh;
-    margin-top: 5vh;
-    margin-left: 2vh;
-    margin-right: 12vh;
+    gap: 1.5rem;
+    margin-top: 1.75rem;
+    margin-left: 1rem;
+    margin-right: 5rem;
 `;
 
 export const MenubarItem = styled.div`
     align-items: center;
     justify-content: start;
     display: flex;
-    gap: 1.3vh;
-    padding: 0 0 0 3vh;
+    gap: 0.6rem;
+    padding: 0 0 0 1.5rem;
 `;
 
 export const Container = styled.div`
@@ -25,4 +25,9 @@ export const Container = styled.div`
     align-items: flex-start;
     width: fit-content;
     height: auto;
+`;
+
+export const MenuName = styled.h2`
+    font-size: 1.125rem;
+    font-weight: bold;
 `;
