@@ -9,7 +9,7 @@ const Menubar = () => {
         <S.Container>
             <S.Menubar>
                 {imgNames.map((value, index) => {
-                    return <MenubarItem imgName={value} MenuName={MenuNames[index]} />
+                    return <MenubarItem key={index} imgName={value} MenuName={MenuNames[index]} />
                 })}
             </S.Menubar>
         </S.Container>
