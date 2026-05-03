@@ -1,9 +1,11 @@
+import * as S from "./Header.style.ts";
+
 const HeaderLeft = () => {
     return (
-        <div className={`header-item left`}>
+        <S.HeaderItem className="header-left">
             <img src="src/assets/menu.svg" alt="menu button" id={`menu-logo`}/>
             <img src="src/assets/clash-logo.svg" alt="clash logo" id={`clash-logo`}/>
-        </div>
+        </S.HeaderItem>
     );
 };
 

@@ -1,15 +1,15 @@
-import HeaderPadding from "../../style/HeaderPadding.style.ts";
+import * as S from "./Header.style.ts"
 import HeaderLeft from "./HeaderLeft.tsx";
 import HeaderRight from "./HeaderRight.tsx";
 
 const Header = () => {
     return (
-        <HeaderPadding>
-            <div id={`header`}>
+        <S.Padding>
+            <S.Header>
                 <HeaderLeft />
                 <HeaderRight />
-            </div>
-        </HeaderPadding>
+            </S.Header>
+        </S.Padding>
     );
 };
 

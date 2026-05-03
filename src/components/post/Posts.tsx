@@ -2,6 +2,7 @@ import type Post from "../../data/Post.ts";
 import {getAll} from "../../api/api.ts";
 import PostsItem from "./PostsItem.tsx";
 import {useEffect, useState} from "react";
+import * as S from "./Post.style.ts";
 
 const Posts = () => {
 
@@ -14,11 +15,11 @@ const Posts = () => {
     }, []);
 
     return (
-        <div className="posts-container">
+        <S.PostsContainer>
             {posts.map((post, index) => (
                 <PostsItem key={index} post={post} />
             ))}
-        </div>
+        </S.PostsContainer>
     );
 
 }

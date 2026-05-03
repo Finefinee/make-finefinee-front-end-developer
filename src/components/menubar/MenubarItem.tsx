@@ -1,3 +1,5 @@
+import * as S from "./Menubar.style.ts";
+
 interface ItemProps {
     MenuName: string;
     imgName: string;
@@ -5,10 +7,10 @@ interface ItemProps {
 
 const MenubarItem = ({MenuName, imgName}: ItemProps) => {
     return (
-        <div className={`menubar-item`}>
+        <S.MenubarItem>
             <img src={`src/assets/${imgName}`} alt={MenuName}/>
             <h2>{MenuName}</h2>
-        </div>
+        </S.MenubarItem>
     );
 };
 
