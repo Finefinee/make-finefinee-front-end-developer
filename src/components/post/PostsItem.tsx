@@ -1,4 +1,5 @@
 import type Post from "../../data/post.ts";
+import * as S from "./Post.style.ts";
 
 interface PostProps {
   post: Post;
@@ -7,7 +8,7 @@ interface PostProps {
 const PostsItem = ({ post }: PostProps) => {
   return (
     <article className="post">
-      <h2>{post.title}</h2>
+      <S.PostTitle>{post.title}</S.PostTitle>
       <p>{post.content}</p>
     </article>
   );

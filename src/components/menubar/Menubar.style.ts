@@ -30,4 +30,11 @@ export const Container = styled.div`
 export const MenuName = styled.h2`
   font-size: 1.125rem;
   font-weight: bold;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+  font-family: var(--heading);
+  color: var(--text-h);
 `;
