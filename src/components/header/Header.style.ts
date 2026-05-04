@@ -44,7 +44,7 @@ export const Username = styled.p`
   font-size: 1rem;
 `;
 
-export const roundText = styled.div`
+export const roundTextBox = styled.div`
   padding: 0.5rem 0.5rem;
   border: 1px solid white;
   border-radius: 1rem;

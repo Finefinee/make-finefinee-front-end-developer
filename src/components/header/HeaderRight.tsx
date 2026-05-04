@@ -10,7 +10,7 @@ const HeaderRight = () => {
 
   return (
     <S.HeaderItem className="header-right">
-      <S.roundText onClick={toggleWriting}>{isWriting ? "작성 취소" : "새 글 작성"}</S.roundText>
+      <S.roundTextBox onClick={toggleWriting}>{isWriting ? "작성 취소" : "새 글 작성"}</S.roundTextBox>
       <img src={Alarm} alt="alarm-logo" id={`alarm-logo`} />
       <S.Profile>
         <img src={Profile} alt="profile" id={`profile-logo`} />
