@@ -9,7 +9,6 @@ const PostsItem = ({ post }: PostProps) => {
   return (
     <article className="post">
       <S.PostTitle>{post.title}</S.PostTitle>
-      <p>{post.content}</p>
     </article>
   );
 };

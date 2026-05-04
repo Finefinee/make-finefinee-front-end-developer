@@ -43,3 +43,11 @@ export const Name = styled.p`
 export const Username = styled.p`
   font-size: 1rem;
 `;
+
+export const roundText = styled.div`
+  padding: 0.5rem 0.5rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+`;

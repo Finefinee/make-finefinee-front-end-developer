@@ -1,18 +1,22 @@
 import * as S from "./Header.style.ts";
+import Alarm from "../../assets/alarm.svg"
+import Profile from "../../assets/profile.svg"
+import { useWritingStore } from "../../zustand/useWritingStore.ts";
 
 const HeaderRight = () => {
+
+  const isWriting = useWritingStore(state => state.isWriting);
+  const toggleWriting = useWritingStore(state => state.toggleWriting);
+
   return (
     <S.HeaderItem className="header-right">
-      <img src="src/assets/alarm.svg" alt="alarm-logo" id={`alarm-logo`} />
+      <S.roundText onClick={toggleWriting}>{isWriting ? "작성 취소" : "새 글 작성"}</S.roundText>
+      <img src={Alarm} alt="alarm-logo" id={`alarm-logo`} />
       <S.Profile>
-        <img src="src/assets/profile.svg" alt="profile" id={`profile-logo`} />
+        <img src={Profile} alt="profile" id={`profile-logo`} />
         <S.ProfileInfo>
-          <S.Name>
-            <p id={`name`}>채근영</p>
-          </S.Name>
-          <S.Username>
-            <p id={`username`}>@chaeyn</p>
-          </S.Username>
+          <S.Name>채근영</S.Name>
+          <S.Username>@chaeyn</S.Username>
         </S.ProfileInfo>
       </S.Profile>
     </S.HeaderItem>
