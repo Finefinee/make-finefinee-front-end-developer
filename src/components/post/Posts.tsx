@@ -4,6 +4,7 @@ import PostsItem from "./PostsItem.tsx";
 import { useEffect, useState } from "react";
 import * as S from "./Post.style.ts";
 import { useWritingStore } from "../../zustand/useWritingStore.ts";
+import PostForm from "./PostForm.tsx";
 
 const Posts = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -31,11 +32,13 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
-  useEffect(() => {
-    if (isWriting) {
-      // TODO
-    }
-  }, [isWriting]);
+  if (isWriting) {
+    return (
+      <S.PostsContainer>
+        <PostForm></PostForm>
+      </S.PostsContainer>
+    );
+  }
 
   return (
     <S.PostsContainer>
