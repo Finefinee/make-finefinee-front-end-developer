@@ -1,16 +1,16 @@
 import type Post from "../../data/Post.ts";
 
 interface PostProps {
-    post: Post;
+  post: Post;
 }
 
-const PostsItem = ({post}: PostProps) => {
-    return (
-        <article className="post">
-            <h2>{post.title}</h2>
-            <p>{post.content}</p>
-        </article>
-    );
+const PostsItem = ({ post }: PostProps) => {
+  return (
+    <article className="post">
+      <h2>{post.title}</h2>
+      <p>{post.content}</p>
+    </article>
+  );
 };
 
 export default PostsItem;
