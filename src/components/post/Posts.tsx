@@ -1,4 +1,4 @@
-import type Post from "../../data/Post.ts";
+import type Post from "../../data/post.ts";
 import { getAll } from "../../api/api.ts";
 import PostsItem from "./PostsItem.tsx";
 import { useEffect, useState } from "react";

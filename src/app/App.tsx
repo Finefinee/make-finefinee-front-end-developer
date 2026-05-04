@@ -7,13 +7,15 @@ import * as S from "./Content.style.ts";
 function App() {
   return (
     <>
-      <Header />
-      <S.BodyContent>
-        <Menubar />
-        <S.MainContent>
-          <Posts />
-        </S.MainContent>
-      </S.BodyContent>
+      <S.Root>
+        <Header />
+        <S.BodyContent>
+          <Menubar />
+          <S.MainContent>
+            <Posts />
+          </S.MainContent>
+        </S.BodyContent>
+      </S.Root>
     </>
   );
 }

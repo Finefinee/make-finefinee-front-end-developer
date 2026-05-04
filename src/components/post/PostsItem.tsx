@@ -1,4 +1,4 @@
-import type Post from "../../data/Post.ts";
+import type Post from "../../data/post.ts";
 
 interface PostProps {
   post: Post;
