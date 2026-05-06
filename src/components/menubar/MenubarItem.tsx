@@ -8,7 +8,7 @@ interface ItemProps {
 const MenubarItem = ({ MenuName, imgName }: ItemProps) => {
   return (
     <S.MenubarItem>
-      <img src={`src/assets/${imgName}`} alt={MenuName} />
+      <img src={`${imgName}`} alt={MenuName} />
       <S.MenuName>{MenuName}</S.MenuName>
     </S.MenubarItem>
   );

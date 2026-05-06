@@ -1,9 +1,14 @@
 import MenubarItem from "./MenubarItem.tsx";
 import * as S from "./Menubar.style.ts";
+import Home from "../../assets/home.svg";
+import Compete from "../../assets/Compete.svg";
+import Record from "../../assets/record.svg";
+import Shop from "../../assets/shop.svg";
+import Roadmap from "../../assets/roadmap.svg";
 
 type name = string[];
 
-const imgNames: name = ["home.svg", "compete.svg", "record.svg", "shop.svg", "roadmap.svg"];
+const imgNames: name = [Home, Compete, Record, Shop, Roadmap];
 
 const MenuNames: name = ["홈", "경쟁", "기록", "상점", "로드맵"];
 
