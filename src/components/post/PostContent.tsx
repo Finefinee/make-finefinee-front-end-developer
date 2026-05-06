@@ -1,5 +1,6 @@
 const PostContent = () => {
-  return <div></div>;
+  return <div>
+  </div>;
 };
 
 export default PostContent;
