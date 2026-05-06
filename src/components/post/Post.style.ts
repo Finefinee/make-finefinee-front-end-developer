@@ -56,6 +56,7 @@ export const PostFormTitle = styled.input`
 `;
 
 export const SubmitButton = styled.button`
+  cursor: pointer;
   padding: 0.5rem 0.5rem;
   width: 15%;
   border: 2px solid rgb(35, 134, 54);
@@ -97,6 +98,7 @@ export const PostFormContent = styled.textarea`
 `;
 
 export const GreenButton = styled.button`
+  cursor: pointer;
   padding: 0.5rem 0.5rem;
   width: 10%;
   border: 2px solid rgb(35, 134, 54);
@@ -117,6 +119,7 @@ export const GreenButton = styled.button`
 `;
 
 export const RedButton = styled.button`
+  cursor: pointer;
   padding: 0.5rem 0.5rem;
   width: 10%;
   border: 2px solid rgb(255, 50, 54);

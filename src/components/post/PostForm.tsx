@@ -35,7 +35,7 @@ const PostForm = () => {
       content: trimContent,
     };
 
-    const fetchPost = async () => {
+    const fetchUploadPost = async () => {
       try {
         setStatus("loading");
         await uploadPost(post);
@@ -47,7 +47,7 @@ const PostForm = () => {
       }
     };
 
-    fetchPost();
+    fetchUploadPost();
 
     const formHtml = e.currentTarget;
     const titleInputHtml = formHtml.elements.namedItem("title") as HTMLInputElement;
@@ -58,7 +58,7 @@ const PostForm = () => {
     setTimeout(() => {
       setShowDoneMessage(false);
       toggleWriting();
-    }, 1800);
+    }, 1500);
   };
 
   return (

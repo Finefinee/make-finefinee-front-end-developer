@@ -25,3 +25,9 @@ export async function uploadPost(post: Post): Promise<Post> {
   });
   return response.json();
 }
+
+export async function deletePost(id: number): Promise<void> {
+  await fetch(`http://localhost:3000/posts/${id}`, {
+    method: "DELETE",
+  });
+}
