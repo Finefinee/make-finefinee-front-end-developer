@@ -55,6 +55,26 @@ export const PostFormTitle = styled.input`
   color: white;
 `;
 
+export const SubmitButton = styled.button`
+  padding: 0.5rem 0.5rem;
+  width: 15%;
+  border: 2px solid rgb(35, 134, 54);
+  border-radius: 0.5rem;
+  background-color: rgb(35, 134, 54);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  @media (max-width: 1024px) {
+    font-size: 15px;
+    width: calc(15% + 1rem);
+  }
+  font-weight: 700;
+  color: white;
+`;
+
 export const PostFormContent = styled.textarea`
   font-size: 20px;
   padding: 0.5rem 0.5rem;
@@ -76,13 +96,32 @@ export const PostFormContent = styled.textarea`
   color: white;
 `;
 
-export const PostFormSubmitButton = styled.button`
+export const GreenButton = styled.button`
   padding: 0.5rem 0.5rem;
-  width: 15%;
-  height: 10%;
+  width: 10%;
   border: 2px solid rgb(35, 134, 54);
   border-radius: 0.5rem;
   background-color: rgb(35, 134, 54);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  @media (max-width: 1024px) {
+    font-size: 15px;
+    width: calc(15% + 1rem);
+  }
+  font-weight: 700;
+  color: white;
+`;
+
+export const RedButton = styled.button`
+  padding: 0.5rem 0.5rem;
+  width: 10%;
+  border: 2px solid rgb(255, 50, 54);
+  border-radius: 0.5rem;
+  background-color: rgb(255, 50, 54);
   align-items: center;
   display: flex;
   justify-content: center;
@@ -102,7 +141,7 @@ export const OnePostContainer = styled.div`
   gap: 1rem;
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
 `;
 
 export const OnePostTitle = styled.h2`
@@ -114,7 +153,7 @@ export const OnePostTitle = styled.h2`
   &::placeholder {
     font-weight: bold;
   }
-  width: 100%;
+  width: 60%;
   line-height: 118%;
   letter-spacing: -0.24px;
   @media (max-width: 1024px) {
@@ -135,7 +174,7 @@ export const OnePostContent = styled.p`
   &::placeholder {
     font-weight: bold;
   }
-  width: 100%;
+  width: 60%;
 
   line-height: 118%;
   letter-spacing: -0.24px;
@@ -144,4 +183,12 @@ export const OnePostContent = styled.p`
   }
   font-weight: 500;
   color: white;
+`;
+
+export const OnePostButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
 `;

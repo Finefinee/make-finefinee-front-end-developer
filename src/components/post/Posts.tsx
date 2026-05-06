@@ -47,6 +47,10 @@ const Posts = () => {
     return (
       <S.PostsContainer>
         <PostContent id={readingPostId}></PostContent>
+        <S.OnePostButtonContainer>
+          <S.GreenButton>뒤로 가기</S.GreenButton>
+          <S.RedButton>삭제</S.RedButton>
+        </S.OnePostButtonContainer>
       </S.PostsContainer>
     );
   }

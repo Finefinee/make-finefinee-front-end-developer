@@ -75,7 +75,7 @@ const PostForm = () => {
           placeholder={"글 입력하기.."}
           onChange={contentChange}
         ></S.PostFormContent>
-        <S.PostFormSubmitButton>작성</S.PostFormSubmitButton>
+        <S.SubmitButton>작성</S.SubmitButton>
       </S.PostForm>
       {status === "error" && <div>에러 발생</div>}
       {status === "blank" && <div>제목 혹은 본문이 비었습니다!</div>}
