@@ -8,6 +8,13 @@ export async function getAll(): Promise<Post[]> {
   return data;
 }
 
+export async function getOne(id: number): Promise<Post> {
+  const response = await fetch(`http://localhost:3000/posts/${id}`);
+  const data: Post = await response.json();
+
+  return data;
+}
+
 export async function uploadPost(post: Post): Promise<Post> {
   const response = await fetch("http://localhost:3000/posts", {
     method: "POST",

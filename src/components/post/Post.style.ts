@@ -12,7 +12,7 @@ export const PostForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
 `;
 
@@ -25,6 +25,7 @@ export const PostFormContainer = styled.div`
 `;
 
 export const PostTitle = styled.h2`
+  cursor: pointer;
   margin: 0;
   font-size: 24px;
   line-height: 118%;
@@ -97,5 +98,55 @@ export const PostFormSubmitButton = styled.button`
   }
   font-family: var(--heading);
   font-weight: 700;
+  color: var(--text-h);
+`;
+
+export const OnePostContainer = styled.div`
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+`;
+
+export const OnePostTitle = styled.h2`
+  text-align: start;
+  font-size: 20px;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid #383a3b;
+  border-radius: 0.5rem;
+  &::placeholder {
+    font-weight: bold;
+  }
+  width: 100%;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+`;
+
+export const OnePostContent = styled.p`
+  text-align: start;
+  font-size: 20px;
+  padding: 0.5rem 0.5rem;
+  resize: none;
+  border: 2px solid #383a3b;
+  border-radius: 0.5rem;
+  &::placeholder {
+    font-weight: bold;
+  }
+  width: 100%;
+
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+  font-family: var(--heading);
+  font-weight: 500;
   color: var(--text-h);
 `;

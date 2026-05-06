@@ -2,7 +2,7 @@ import * as S from "./Post.style.ts";
 import * as React from "react";
 import { useState } from "react";
 import type Post from "../../data/post.ts";
-import { uploadPost } from "../../api/api.ts";
+import { uploadPost } from "../../api/postApi.ts";
 import { useWritingStore } from "../../zustand/useWritingStore.ts";
 
 const PostForm = () => {
