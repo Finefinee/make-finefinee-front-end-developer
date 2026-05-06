@@ -19,7 +19,6 @@ const Posts = () => {
     const fetchPosts = async () => {
       setStatus("loading");
       try {
-        await new Promise(res => setTimeout(res, 1000));
         const data = await getAll();
         setPosts(data);
         setStatus("done");
@@ -30,7 +29,7 @@ const Posts = () => {
     };
 
     fetchPosts();
-  }, []);
+  }, [isWriting]);
 
   if (isWriting) {
     return (
