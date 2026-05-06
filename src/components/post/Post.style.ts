@@ -33,9 +33,8 @@ export const PostTitle = styled.h2`
   @media (max-width: 1024px) {
     font-size: 15px;
   }
-  font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: white;
 `;
 
 export const PostFormTitle = styled.input`
@@ -52,9 +51,8 @@ export const PostFormTitle = styled.input`
   @media (max-width: 1024px) {
     font-size: 15px;
   }
-  font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: white;
 `;
 
 export const PostFormContent = styled.textarea`
@@ -74,9 +72,8 @@ export const PostFormContent = styled.textarea`
   @media (max-width: 1024px) {
     font-size: 15px;
   }
-  font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: white;
 `;
 
 export const PostFormSubmitButton = styled.button`
@@ -96,9 +93,8 @@ export const PostFormSubmitButton = styled.button`
     font-size: 15px;
     width: calc(15% + 1rem);
   }
-  font-family: var(--heading);
   font-weight: 700;
-  color: var(--text-h);
+  color: white;
 `;
 
 export const OnePostContainer = styled.div`
@@ -124,9 +120,8 @@ export const OnePostTitle = styled.h2`
   @media (max-width: 1024px) {
     font-size: 15px;
   }
-  font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: white;
 `;
 
 export const OnePostContent = styled.p`
@@ -136,6 +131,7 @@ export const OnePostContent = styled.p`
   resize: none;
   border: 2px solid #383a3b;
   border-radius: 0.5rem;
+  min-height: 20rem;
   &::placeholder {
     font-weight: bold;
   }
@@ -146,7 +142,6 @@ export const OnePostContent = styled.p`
   @media (max-width: 1024px) {
     font-size: 15px;
   }
-  font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: white;
 `;
