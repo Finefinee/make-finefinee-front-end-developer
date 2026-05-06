@@ -7,3 +7,14 @@ export async function getAll(): Promise<Post[]> {
 
   return data;
 }
+
+export async function uploadPost(post: Post): Promise<Post> {
+  const response = await fetch("http://localhost:3000/posts", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(post),
+  });
+  return response.json();
+}
