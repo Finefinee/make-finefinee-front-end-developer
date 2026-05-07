@@ -15,7 +15,7 @@ export async function getOne(id: number): Promise<Post> {
   return data;
 }
 
-export async function uploadPost(post: Post): Promise<Post> {
+export async function uploadPost(post: Omit<Post, "id">): Promise<Post> {
   const response = await fetch("http://localhost:3000/posts", {
     method: "POST",
     headers: {

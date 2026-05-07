@@ -4,12 +4,14 @@ import { useState } from "react";
 import type Post from "../../data/post.ts";
 import { uploadPost } from "../../api/postApi.ts";
 import { useWritingStore } from "../../zustand/useWritingStore.ts";
+import { useNavigate } from "react-router";
 
 const PostForm = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [status, setStatus] = useState<"done" | "loading" | "error" | "blank">("done");
   const [showDoneMessage, setShowDoneMessage] = useState<boolean>(false);
+  const navigate = useNavigate();
   const toggleWriting = useWritingStore(state => state.toggleWriting);
 
   const titleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,7 +32,7 @@ const PostForm = () => {
       return;
     }
 
-    const post: Post = {
+    const post: Omit<Post, "id"> = {
       title: trimTitle,
       content: trimContent,
     };
@@ -57,6 +59,7 @@ const PostForm = () => {
 
     setTimeout(() => {
       setShowDoneMessage(false);
+      navigate("/posts");
       toggleWriting();
     }, 1500);
   };

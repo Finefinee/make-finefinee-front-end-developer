@@ -4,7 +4,6 @@ import PostsItem from "./PostsItem.tsx";
 import { useEffect, useState } from "react";
 import * as S from "./Post.style.ts";
 import { useWritingStore } from "../../zustand/useWritingStore.ts";
-import PostForm from "./PostForm.tsx";
 import { useReadingStore } from "../../zustand/useReadingStore.ts";
 import PostContent from "./PostContent.tsx";
 
@@ -53,14 +52,6 @@ const Posts = () => {
 
     fetchGetAllPosts();
   }, [isWriting, isReading]);
-
-  if (isWriting) {
-    return (
-      <S.PostsContainer>
-        <PostForm></PostForm>
-      </S.PostsContainer>
-    );
-  }
 
   if (isReading) {
     return (
