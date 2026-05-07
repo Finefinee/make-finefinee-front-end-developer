@@ -1,11 +1,11 @@
 import { create } from "zustand";
 
-interface Reading {
+interface ReadingState {
   isReading: boolean;
   toggleReading: () => void;
 }
 
-export const useReadingStore = create<Reading>(set => ({
+export const useReadingStore = create<ReadingState>(set => ({
   isReading: false,
   toggleReading: () =>
     set(state => ({

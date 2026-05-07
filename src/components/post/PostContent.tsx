@@ -2,20 +2,20 @@ import { useEffect, useState } from "react";
 import { getOne } from "../../api/postApi.ts";
 import * as S from "./Post.style.ts";
 import type Post from "../../data/post.ts";
+import { useReadingPostIdStore } from "../../zustand/useReadingPostIdStore.ts";
+import { useParams } from "react-router";
 
-interface PostContentProps {
-  id: number;
-}
-
-const PostContent = ({ id }: PostContentProps) => {
+const PostContent = () => {
   const [post, setPost] = useState<Post | null>(null);
   const [status, setStatus] = useState<"done" | "loading" | "error">("done");
+  const setReadingPostId = useReadingPostIdStore(state => state.setReadingPostId);
+  const { postId } = useParams();
 
   useEffect(() => {
     const fetchPost = async () => {
       setStatus("loading");
       try {
-        const data: Post = await getOne(id);
+        const data: Post = await getOne(Number(postId));
         setPost(data);
         setStatus("done");
       } catch (e: unknown) {
@@ -25,7 +25,13 @@ const PostContent = ({ id }: PostContentProps) => {
     };
 
     fetchPost();
-  }, []);
+  }, [postId]);
+
+  useEffect(() => {
+    if (postId) {
+      setReadingPostId(Number(postId));
+    }
+  }, [postId, setReadingPostId]);
 
   return (
     <S.OnePostContainer>
