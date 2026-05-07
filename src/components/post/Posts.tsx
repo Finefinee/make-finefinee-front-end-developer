@@ -84,19 +84,18 @@ const Posts = () => {
       {status === "done" && posts.length === 0 && <div>글이 없습니다</div>}
 
       {status === "done" &&
-        posts.map(post => (
-          <PostsItem
-            key={post.id}
-            post={post}
-            id={post.id}
-            setReadingPostId={function (id?: number): void {
-              if (id === undefined) {
-                return;
-              }
-              setReadingPostId(id);
-            }}
-          />
-        ))}
+        posts.map(
+          post =>
+            post.id && (
+              <PostsItem
+                key={post.id}
+                post={post}
+                setReadingPostId={function (id: number): void {
+                  setReadingPostId(id);
+                }}
+              />
+            )
+        )}
     </S.PostsContainer>
   );
 };
