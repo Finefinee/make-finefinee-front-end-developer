@@ -1,8 +1,7 @@
 import type Post from "../../types/post.ts";
 import * as S from "./Post.style.ts";
-import { useReadingStore } from "../../store/useReadingStore.ts";
+import { useReadingPostIdStore, useReadingStore } from "../../store";
 import { useNavigate } from "react-router";
-import { useReadingPostIdStore } from "../../store/useReadingPostIdStore.ts";
 
 interface PostsItemProps {
   post: Post;

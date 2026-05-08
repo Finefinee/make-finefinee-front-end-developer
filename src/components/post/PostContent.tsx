@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getOne } from "../../api/postApi.ts";
 import * as S from "./Post.style.ts";
 import type Post from "../../types/post.ts";
-import { useReadingPostIdStore } from "../../store/useReadingPostIdStore.ts";
+import { useReadingPostIdStore } from "../../store";
 import { useParams } from "react-router";
 
 const PostContent = () => {

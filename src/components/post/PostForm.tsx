@@ -3,7 +3,7 @@ import * as React from "react";
 import { useState } from "react";
 import type Post from "../../types/post.ts";
 import { uploadPost } from "../../api/postApi.ts";
-import { useWritingStore } from "../../store/useWritingStore.ts";
+import { useWritingStore } from "../../store";
 import { useNavigate } from "react-router";
 
 const PostForm = () => {

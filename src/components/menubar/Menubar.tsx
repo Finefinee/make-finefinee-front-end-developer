@@ -1,10 +1,10 @@
-import MenubarItem from "./MenubarItem.tsx";
 import * as S from "./Menubar.style.ts";
 import Home from "../../assets/home.svg";
 import Compete from "../../assets/Compete.svg";
 import Record from "../../assets/record.svg";
 import Shop from "../../assets/shop.svg";
 import Roadmap from "../../assets/roadmap.svg";
+import { MenubarItem } from "./index.ts";
 
 type name = string[];
 

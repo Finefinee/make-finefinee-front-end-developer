@@ -1,6 +1,5 @@
 import * as S from "./Header.style.ts";
-import HeaderLeft from "./HeaderLeft.tsx";
-import HeaderRight from "./HeaderRight.tsx";
+import { HeaderLeft, HeaderRight } from "./index.ts";
 
 const Header = () => {
   return (

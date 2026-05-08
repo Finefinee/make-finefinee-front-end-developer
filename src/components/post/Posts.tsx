@@ -1,10 +1,9 @@
 import type Post from "../../types/post.ts";
 import { getAll } from "../../api/postApi.ts";
-import PostsItem from "./PostsItem.tsx";
 import { useEffect, useState } from "react";
 import * as S from "./Post.style.ts";
-import { useWritingStore } from "../../store/useWritingStore.ts";
-import { useReadingStore } from "../../store/useReadingStore.ts";
+import { useReadingStore, useWritingStore } from "../../store";
+import { PostsItem } from "./index.ts";
 
 const Posts = () => {
   const [posts, setPosts] = useState<Post[]>([]);

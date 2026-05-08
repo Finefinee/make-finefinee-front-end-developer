@@ -9,6 +9,6 @@ export const useReadingPostIdStore = create<ReadingPostIdState>(set => ({
   readingPostId: null,
   setReadingPostId: (id: number) =>
     set(() => ({
-      readingPostId: id
+      readingPostId: id,
     })),
 }));

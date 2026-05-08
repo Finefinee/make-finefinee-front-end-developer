@@ -1,16 +1,12 @@
-import Header from "../components/header/Header.tsx";
-import Menubar from "../components/menubar/Menubar.tsx";
-import Posts from "../components/post/Posts.tsx";
 import * as ContentS from "./Content.style.ts";
 import { Route, Routes, useNavigate } from "react-router";
-import PostForm from "../components/post/PostForm.tsx";
 import * as PostS from "../components/post/Post.style.ts";
-import * as S from "../components/post/Post.style.ts";
-import PostContent from "../components/post/PostContent.tsx";
-import { useReadingStore } from "../store/useReadingStore.ts";
 import { deletePost } from "../api/postApi.ts";
 import { useState } from "react";
-import { useReadingPostIdStore } from "../store/useReadingPostIdStore.ts";
+import { PostContent, PostForm, Posts } from "../components/post/index.ts";
+import { Header } from "../components/header/index.ts";
+import { Menubar } from "../components/menubar/index.ts";
+import { useReadingPostIdStore, useReadingStore } from "../store";
 
 function App() {
   const [deleteSuccess, setDeleteSuccess] = useState<boolean>(false);
@@ -87,16 +83,16 @@ function App() {
               <ContentS.BodyContent>
                 <Menubar />
                 <ContentS.MainContent>
-                  <S.PostsContainer>
+                  <PostS.PostsContainer>
                     <PostContent></PostContent>
-                    <S.OnePostButtonContainer>
-                      <S.GreenButton onClick={handleBack}>뒤로 가기</S.GreenButton>
-                      <S.RedButton onClick={fetchDeletePost}>삭제</S.RedButton>
-                    </S.OnePostButtonContainer>
+                    <PostS.OnePostButtonContainer>
+                      <PostS.GreenButton onClick={handleBack}>뒤로 가기</PostS.GreenButton>
+                      <PostS.RedButton onClick={fetchDeletePost}>삭제</PostS.RedButton>
+                    </PostS.OnePostButtonContainer>
                     {status === "done" && deleteSuccess === true && <div>삭제 성공!</div>}
                     {status === "error" && <div>에러 발생</div>}
                     {status === "loading" && <div>로딩 중...</div>}
-                  </S.PostsContainer>
+                  </PostS.PostsContainer>
                 </ContentS.MainContent>
               </ContentS.BodyContent>
             </ContentS.Root>
