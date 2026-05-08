@@ -1,9 +1,9 @@
 import * as S from "./Post.style.ts";
 import * as React from "react";
 import { useState } from "react";
-import type Post from "../../data/post.ts";
+import type Post from "../../types/post.ts";
 import { uploadPost } from "../../api/postApi.ts";
-import { useWritingStore } from "../../zustand/useWritingStore.ts";
+import { useWritingStore } from "../../store/useWritingStore.ts";
 import { useNavigate } from "react-router";
 
 const PostForm = () => {

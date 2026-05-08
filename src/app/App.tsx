@@ -5,12 +5,12 @@ import * as ContentS from "./Content.style.ts";
 import { Route, Routes, useNavigate } from "react-router";
 import PostForm from "../components/post/PostForm.tsx";
 import * as PostS from "../components/post/Post.style.ts";
-import PostContent from "../components/post/PostContent.tsx";
 import * as S from "../components/post/Post.style.ts";
-import { useReadingStore } from "../zustand/useReadingStore.ts";
+import PostContent from "../components/post/PostContent.tsx";
+import { useReadingStore } from "../store/useReadingStore.ts";
 import { deletePost } from "../api/postApi.ts";
 import { useState } from "react";
-import { useReadingPostIdStore } from "../zustand/useReadingPostIdStore.ts";
+import { useReadingPostIdStore } from "../store/useReadingPostIdStore.ts";
 
 function App() {
   const [deleteSuccess, setDeleteSuccess] = useState<boolean>(false);

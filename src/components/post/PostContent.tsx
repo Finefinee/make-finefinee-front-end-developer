@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { getOne } from "../../api/postApi.ts";
 import * as S from "./Post.style.ts";
-import type Post from "../../data/post.ts";
-import { useReadingPostIdStore } from "../../zustand/useReadingPostIdStore.ts";
+import type Post from "../../types/post.ts";
+import { useReadingPostIdStore } from "../../store/useReadingPostIdStore.ts";
 import { useParams } from "react-router";
 
 const PostContent = () => {

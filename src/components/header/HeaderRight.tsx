@@ -1,7 +1,7 @@
 import * as S from "./Header.style.ts";
 import Alarm from "../../assets/alarm.svg";
 import Profile from "../../assets/profile.svg";
-import { useWritingStore } from "../../zustand/useWritingStore.ts";
+import { useWritingStore } from "../../store/useWritingStore.ts";
 import { useNavigate } from "react-router";
 
 const HeaderRight = () => {

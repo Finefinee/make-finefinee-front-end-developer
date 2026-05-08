@@ -1,4 +1,4 @@
-import type Post from "../data/post.ts";
+import type Post from "../types/post.ts";
 
 export async function getAll(): Promise<Post[]> {
   // 1. fetch의 응답을 json으로 변환하면 바로 PostsItem[] 타입의 객체가 됩니다.

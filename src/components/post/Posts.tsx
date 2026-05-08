@@ -1,10 +1,10 @@
-import type Post from "../../data/post.ts";
+import type Post from "../../types/post.ts";
 import { getAll } from "../../api/postApi.ts";
 import PostsItem from "./PostsItem.tsx";
 import { useEffect, useState } from "react";
 import * as S from "./Post.style.ts";
-import { useWritingStore } from "../../zustand/useWritingStore.ts";
-import { useReadingStore } from "../../zustand/useReadingStore.ts";
+import { useWritingStore } from "../../store/useWritingStore.ts";
+import { useReadingStore } from "../../store/useReadingStore.ts";
 
 const Posts = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -38,16 +38,7 @@ const Posts = () => {
       {status === "loading" && <div>로딩 중...</div>}
       {status === "done" && posts.length === 0 && <div>글이 없습니다</div>}
 
-      {status === "done" &&
-        posts.map(
-          post =>
-            post.id && (
-              <PostsItem
-                key={post.id}
-                post={post}
-              />
-            )
-        )}
+      {status === "done" && posts.map(post => post.id && <PostsItem key={post.id} post={post} />)}
     </S.PostsContainer>
   );
 };
